@@ -1,10 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Linkdind from "../components/Icons/Linkdind.astro";
+import Github from "../components/Icons/Github.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>	
-	</main>
+<Layout title="Andres Portfolio">
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1
+        class="text-white text-5xl font-bold flex justify-center flex row gap-x-2 pb-10"
+      >
+        Hi! I'm Andrés!!
+        <a
+          class="flex jus tify-center items-center"
+          href="https://www.linkedin.com/in/am-dussanb/"
+          target="_blank"
+          rel="noopener"
+        >
+          <Badge> Open to work </Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl opacity-80">
+        I am a Systems and Computer Engineering student from Colombia with
+        practical experience as a backend developer, specializing in Java,
+        Golang, and Node.js (JavaScript & TypeScript). I have a strong passion
+        for technology, constantly exploring new tools and innovations like
+        No-Code and Low-Code platforms. +3 Years of experience in backend
+        software development, working with Java (Maven, Gradle, Spring Boot,
+        Hibernate, JPA), Golang, and Node.js (Express, Fastify, TypeORM).
+      </h2>
+      <ul class="flex gap-x-6 pt-4">
+        <li>
+          <!-- Aquí usamos flex para alinear el icono y el texto -->
+          <a
+            href="https://www.linkedin.com/in/am-dussanb/"
+            class="flex items-center gap-x-2 pb-4"
+          >
+            <Linkdind class="w-6 h-6" />
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <!-- Aquí usamos flex para alinear el icono y el texto -->
+          <a
+            href="https://github.com/Andres-Shadow"
+            class="flex items-center gap-x-2 pb-4"
+          >
+            <Github class="w-6 h-6" />
+            Github
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
 </Layout>
-

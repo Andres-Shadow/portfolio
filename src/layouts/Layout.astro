@@ -2,9 +2,9 @@
 interface Props {
   title: string;
 }
-
 const { title } = Astro.props;
 import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
 ---
 
 <!doctype html>
@@ -18,6 +18,7 @@ import Header from "../components/Header.astro";
     <title>{title}</title>
   </head>
   <body>
+    
     <Header />
     <slot />
   </body>
@@ -27,11 +28,13 @@ import Header from "../components/Header.astro";
     color-scheme: dark;
   }
   html {
-    background: #0000;
-    font-family: system-ui, sans-serif;
+    font-family: "Onest variable";
   }
   body {
+    background: #161619;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    
   }
 </style>
