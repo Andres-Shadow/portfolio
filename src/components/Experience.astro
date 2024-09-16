@@ -1,0 +1,57 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    title: "Microservices Architecture Development",
+    date: "2024 - Present",
+    description:
+      "Led the development of a microservices-based architecture, utilizing Golang, TypeScript, JavaScript, and Python as the primary programming languages. " +
+      "Each service was containerized using Docker and orchestrated with Docker-Compose. The services communicated via a N.A.T.S messaging server, with each service managing its own database (PostgreSQL, MySQL). " +
+      "Implemented testing frameworks like Cucumber, and integrated continuous automation using Jenkins.",
+  },
+  {
+    title: "Java Application Development",
+    date: "2021 - Present",
+    description:
+      "Developed various academic projects using Java, focusing on both desktop (JavaFX) and web applications (Spring Boot & Quarkus). " +
+      "Leveraged technologies like JDBC, JPA, and Hibernate for database interaction, managing project dependencies with Gradle and Maven.",
+  },
+  {
+    title: "Virtualization Technologies Implementation",
+    date: "2022 - Present",
+    description:
+      "Implemented server and container virtualization strategies using Docker and Kubernetes. " +
+      "Migrated locally developed projects into Docker containers for streamlined deployment.",
+  },
+  {
+    title: "Golang Application Development",
+    date: "2023 - Present",
+    description:
+      "Developed personal and academic projects using Golang, with a focus on web applications (Gin, Fiber, and Gorilla Mux). " +
+      "Built RESTful services and managed database connections using GORM and XORM.",
+  },
+  {
+    title: "Version Control with Git",
+    date: "2021 - Present",
+    description:
+      "Utilized Git for version control across various projects, with GitHub as the primary platform for code storage and collaboration.",
+  },
+  {
+    title: "Frontend Development with React and Angular",
+    date: "2023 - Present",
+    description:
+      "Acquired foundational knowledge in frontend development, focusing on building interactive user interfaces using React and Angular.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-6">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

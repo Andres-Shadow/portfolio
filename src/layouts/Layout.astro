@@ -18,7 +18,6 @@ import "@fontsource-variable/onest";
     <title>{title}</title>
   </head>
   <body>
-    
     <Header />
     <slot />
   </body>
@@ -29,12 +28,18 @@ import "@fontsource-variable/onest";
   }
   html {
     font-family: "Onest variable";
+    scroll-behavior: smooth;
   }
   body {
     background: #161619;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      scroll-behavior: auto;
+    }
   }
 </style>
