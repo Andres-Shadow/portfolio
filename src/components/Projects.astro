@@ -1,0 +1,44 @@
+---
+const PROJECTS = [
+  {
+    title: "Microservices implementation project",
+    description:
+      "Developed a microservices project with 7 APIS (Authenticacion with JWT API, Logs Manager API, User accounts Manager API, Health Monitor API, Gateway API, Notications API" +
+      " implementing Goland, Python, Javascript and NATS as message broker. The project was deployed in a Docker-Compose environment. and tested with cucumber.js (automation tests setted in Jenkins via docker).",
+    link: "https://github.com/Andres-Shadow/Microservices",
+    tags: [
+      "Golang",
+      "Gin  ",
+      "Gorilla Mux",
+      "Python",
+      "NATS",
+      "Docker",
+      "Cucumber.js",
+      "Jenkins",
+      "javascript",
+      "Typescript",
+    ],
+  },
+];
+---
+
+{
+  PROJECTS.map((project) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+        {project.title}
+      </h3>
+      <p class="text-lg mb-4">{project.description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {project.tags.map((tag) => (
+          <span class="flex gap-x-2 rounded-full border text-sm py-2 px-1">
+            <li>{tag}</li>
+          </span>
+        ))}
+      </ul>
+      <a href={project.link} class="text-blue-500 underline">
+        Github repo
+      </a>
+    </article>
+  ))
+}

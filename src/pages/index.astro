@@ -9,6 +9,8 @@ import Mail from "../components/Icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import Container from "../components/Container.astro";
 import Study from "../components/Icons/Study.astro";
+import Code from "../components/Icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Andres Portfolio">
@@ -61,6 +63,16 @@ import Study from "../components/Icons/Study.astro";
       </h2>
 
       <Experience />
+    </Container>
+
+    <Container id="projects">
+      <h2
+        class="text-3xl font-semi-bold text-white mb-10 opacity-90 flex gap-x-2 pt-2"
+      >
+        <Code class="size-9" />
+        Projects
+      </h2>
+      <Projects />
     </Container>
   </main>
 </Layout>
