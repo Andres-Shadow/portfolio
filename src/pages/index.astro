@@ -11,6 +11,7 @@ import Container from "../components/Container.astro";
 import Study from "../components/Icons/Study.astro";
 import Code from "../components/Icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import About from "../components/Icons/About.astro";
 ---
 
 <Layout title="Andres Portfolio">
@@ -52,6 +53,48 @@ import Projects from "../components/Projects.astro";
           andremadussan@gmail.com
         </SocialInfo>
       </nav>
+    </Container>
+
+    <Container id="about">
+      <h2
+        class="text-3xl font-semi-bold text-white mb-10 opacity-90 flex gap-x-2 pt-2"
+      >
+        <About class="size-9" />
+        About Me
+      </h2>
+      <p class="text-lg opacity-80">
+        I am a passionate Systems and Computer Engineering student at
+        Universidad del Quindío, currently in my 10th semester. Since 2021, I've
+        been deeply involved in backend development, creating solutions through
+        university projects and beyond. I am eager to gain my first professional
+        experience in the IT field, regardless of the sector. My primary goal is
+        to continue learning and growing, applying my skills while embracing new
+        challenges and opportunities. My expertise spans across Java, Python,
+        Golang, and Node.js (JavaScript & TypeScript), with foundational
+        knowledge in C# (.Net).<br /><br />
+
+        Recently, I have expanded my skills into frontend development, focusing
+        on modern frameworks like React, Next.js, and Astro, alongside styling
+        tools such as TailwindCSS and Bootstrap.<br /><br />
+
+        I am fluent in English (B2), with intermediate proficiency in French
+        (B1) and a basic understanding of Colombian Sign Language (A1).<br /><br
+        />
+
+        Here are some of the technologies and tools I frequently work with:
+        <ul class="list-disc list-inside pb-7 pt-3 opacity-80">
+          <li>Java, Golang, Python & Node.js for backend development</li>
+          <li>
+            Backend frameworks: Express.js, Gin, Gorilla Mux, Fastify.js, Flask
+            & FastAPI
+          </li>
+          <li>Frontend frameworks: React, Astro</li>
+          <li>Styling: TailwindCSS & Bootstrap</li>
+          <li>Version control: Git & GitHub</li>
+          <li>Development tools: Postman, VSCode, IntelliJ IDEA</li>
+          <li>CI/CD tools: Jenkins & other automation platforms</li>
+        </ul>
+      </p>
     </Container>
 
     <Container id="experience">
