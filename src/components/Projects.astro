@@ -8,17 +8,36 @@ const PROJECTS = [
     link: "https://github.com/Andres-Shadow/Microservices",
     tags: [
       "Golang",
-      "Gin  ",
-      "Gorilla Mux",
+      "Javascript",
+      "Typescript",
       "Python",
       "NATS",
       "Docker",
       "Cucumber.js",
       "Jenkins",
-      "javascript",
-      "Typescript",
     ],
   },
+  {
+    title: "Spring boot shopping cart",
+    description:
+      "Fullstack tecnical test for a job application. Developed a shopping cart with Spring Boot, Manven, Lombok for backend and Angular with Typescript for frontend." +
+      ' The project implemented a Json file as database so package "logic" contains an manual developed semi-ORM',
+    link: "https://github.com/Andres-Shadow/shopping-cart",
+    tags: ["Java", "Spring Boot", "JPA", "Maven", "Angular", "Lombok"],
+  },
+  {
+    title: "To DO Task Project",
+    description:
+      "Developed a simple To Do Task project with React, Typescript and Tailwind CSS. The project was deployed in Github Pages.",
+    link: "https://github.com/Andres-Shadow/to-do-task-react",
+    tags: ["React", "Typescript", "Tailwind CSS"],
+  },
+  {
+    title: "Random Image Server",
+    description: "Developed a simple server that makes a recursive search into a folder and returns three random images that are displayed in a simple HTML page with Bootstrap.",
+    link: "https://github.com/Andres-Shadow/Random-Image-Golang-App",
+    tags: ["Golang", "HTML", "Bootstrap"],
+  }
 ];
 ---
 
@@ -29,16 +48,16 @@ const PROJECTS = [
         {project.title}
       </h3>
       <p class="text-lg mb-4">{project.description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2">
+      <a href={project.link} class="text-yellow-100 ">
+        Github repo
+      </a>
+      <ul class="flex gap-x-2 flex-row mb-2 pt-3">
         {project.tags.map((tag) => (
           <span class="flex gap-x-2 rounded-full border text-sm py-2 px-1">
             <li>{tag}</li>
           </span>
         ))}
       </ul>
-      <a href={project.link} class="text-blue-500 underline">
-        Github repo
-      </a>
     </article>
   ))
 }
