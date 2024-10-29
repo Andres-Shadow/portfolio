@@ -1,4 +1,6 @@
 ---
+import Badge from "./Badge.astro";
+
 const PROJECTS = [
   {
     title: "Microservices implementation project",
@@ -26,38 +28,44 @@ const PROJECTS = [
     tags: ["Java", "Spring Boot", "JPA", "Maven", "Angular", "Lombok"],
   },
   {
-    title: "To Do Task Project",
-    description:
-      "Developed a simple To Do Task project with React, Typescript and Tailwind CSS. The project was deployed in Github Pages.",
-    link: "https://github.com/Andres-Shadow/to-do-task-react",
-    tags: ["React", "Typescript", "Tailwind CSS"],
-  },
-  {
     title: "Random Image Server",
-    description: "Developed a simple server that makes a recursive search into a folder and returns three random images that are displayed in a simple HTML page with Bootstrap.",
+    description:
+      "Developed a simple server that makes a recursive search into a folder and returns three random images that are displayed in a simple HTML page with Bootstrap.",
     link: "https://github.com/Andres-Shadow/Random-Image-Golang-App",
     tags: ["Golang", "HTML", "Bootstrap"],
-  }
+  },
+  {
+    title: "New Projects",
+    description: "Coming soon...",
+    link: "#",
+    tags: [],
+  },
 ];
 ---
 
-{
-  PROJECTS.map((project) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
-        {project.title}
-      </h3>
-      <p class="text-lg mb-4">{project.description}</p>
-      <a href={project.link} class="text-yellow-100 ">
-        Github repo
-      </a>
-      <ul class="flex gap-x-2 flex-row mb-2 pt-3">
-        {project.tags.map((tag) => (
-          <span class="flex gap-x-2 rounded-full border text-sm py-2 px-1">
-            <li>{tag}</li>
-          </span>
-        ))}
-      </ul>
-    </article>
-  ))
-}
+<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+  {
+    PROJECTS.map((project) => (
+      <div class="max-w-sm p-6 border rounded-lg shadow bg-gray-900 border-gray-800">
+        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white-200 opacity-70">
+          {project.title}
+        </h5>
+
+        <p class="mb-3 font-normal text-gray-400">{project.description}</p>
+
+        <a
+          href={project.link}
+          class="inline-flex items-center font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200"
+        >
+          Github Repo
+        </a>
+
+        <ul class="flex flex-wrap gap-2 mb-2 pt-3">
+          {project.tags.map((tag) => (
+            <Badge>{tag}</Badge>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>

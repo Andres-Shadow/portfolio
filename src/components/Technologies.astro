@@ -1,0 +1,129 @@
+---
+const TECHNOLOGY_CATEGORIES = [
+  {
+    category: "Backend Development",
+    technologies: [
+      {
+        name: "Java with SpringBoot, Hibernate & JPA",
+        level: "Advanced",
+        experience: "3 Years",
+      },
+      {
+        name: "Go with Gin, Fiber, Gorilla Mux & Gorm",
+        level: "Advanced",
+        experience: "2 Years",
+      },
+      {
+        name: "Node.js (Javascript & Typescript) with Express, Fastify & Sequelize",
+        level: "Advanced",
+        experience: "2 Years",
+      },
+      {
+        name: "Python with Flask & FastAPI",
+        level: "Medium",
+        experience: "1.5 Years",
+      },
+    ],
+  },
+  {
+    category: "Databases",
+    technologies: [
+      {
+        name: "Relational Database Management with MySQL, MariaDB & PostgreSQL",
+        level: "Advanced",
+        experience: "3 Years",
+      },
+      {
+        name: "No Relational Database Management with MongoDB",
+        level: "Basic",
+        experience: "1 Year",
+      },
+    ],
+  },
+
+  {
+    category: "Frontend Development",
+    technologies: [
+      {
+        name: "React.js & Next.js",
+        level: "Basic",
+        experience: "1.5 Years",
+      },
+      {
+        name: "Angular",
+        level: "Basic",
+        experience: "4 Months",
+      },
+      {
+        name: "Astro",
+        level: "Basic",
+        experience: "1 Month",
+      },
+    ],
+  },
+  {
+    category: "DevOps & Tools",
+    technologies: [
+      {
+        name: "Styling with TailwindCSS & Bootstrap",
+        level: "Advanced",
+        experience: "2 Years",
+      },
+      {
+        name: "Version Control with Git, GitHub, GitLab & Bitbucket",
+        level: "Advanced",
+        experience: "3 Years",
+      },
+      {
+        name: "Development Tools: Postman, VSCode, IntelliJ IDEA",
+        level: "Advanced",
+        experience: "3 Years",
+      },
+      {
+        name: "CI/CD Tools: Jenkins & Other Automation Platforms",
+        level: "Basic",
+        experience: "1 Year",
+      },
+      {
+        name: "Containerization with Docker",
+        level: "Advanced",
+        experience: "3 Years",
+      },
+      {
+        name: "Cloud Computing (AWS, EC2, EMR & Redshift)",
+        level: "Medium",
+        experience: "1.5 Years",
+      },
+      {
+        name: "Testing with BDD & TDD (Cucumber, Junit & Jest)",
+        level: "Basic",
+        experience: "1 Year",
+      },
+    ],
+  },
+];
+---
+
+<!-- Sección de tarjetas -->
+<div class="py-2">
+  {
+    TECHNOLOGY_CATEGORIES.map((category) => (
+      <div class="mb-8">
+        <h4 class="text-2xl font-bold text-white mb-4">{category.category}</h4>
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {category.technologies.map((tech) => (
+            <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
+              <h5 class="text-lg font-semibold text-white opacity-70">
+                {tech.name}
+              </h5>
+              <p class="text-sm text-gray-400">Experience: {tech.experience}</p>
+              <p class="text-sm font-medium text-gray-300">
+                Level: {tech.level}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>
