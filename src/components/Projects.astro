@@ -1,6 +1,7 @@
 ---
 import Badge from "./Badge.astro";
 import Github from "./Icons/Github.astro";
+import SocialInfo from "./SocialInfo.astro";
 
 const PROJECTS = [
   {
@@ -48,7 +49,7 @@ const PROJECTS = [
 <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
   {PROJECTS.map((project) => (
     <div class="max-w-sm p-6 border rounded-lg shadow bg-gray-900 border-gray-800">
-      <h5 class="mb-2 text-2xl font-semibold tracking-tight text-yellow-200">
+      <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white-200 opacity-70">
         {project.title}
       </h5>
 
@@ -65,7 +66,7 @@ const PROJECTS = [
 
       <ul class="flex flex-wrap gap-2 mb-2 pt-3">
         {project.tags.map((tag) => (
-          <Badge class="text-gray-900 bg-green-400 px-2 py-1 rounded-lg font-semibold">
+          <Badge >
             {tag}
           </Badge>
         ))}

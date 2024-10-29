@@ -3,18 +3,17 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
-    title: "Microservices Architecture Development",
-    date: "Feb 2024 - June 2024",
-    description:
-      "Led the development of a microservices-based architecture, utilizing Golang, TypeScript, JavaScript, and Python as the primary programming languages. " +
-      "Each service was containerized and communicated via a N.A.T.S messaging server",
-  },
-  {
     title: "Java Application Development",
     date: "2021 - Present",
     description:
       "Developed various academic projects using Java, focusing on both desktop (JavaFX) and web applications (Spring Boot & Quarkus). " +
       "Leveraged technologies like JDBC, JPA, and Hibernate for database interaction, managing project dependencies with Gradle and Maven.",
+  },
+  {
+    title: "Version Control with Git",
+    date: "2021 - Present",
+    description:
+      "Utilized Git for version control across various projects, with GitHub as the primary platform for code storage and collaboration.",
   },
   {
     title: "Virtualization Technologies Implementation",
@@ -31,26 +30,21 @@ const EXPERIENCE = [
       "Built RESTful services and managed database connections using GORM and XORM.",
   },
   {
-    title: "Version Control with Git",
-    date: "2021 - Present",
-    description:
-      "Utilized Git for version control across various projects, with GitHub as the primary platform for code storage and collaboration.",
-  },
-  {
     title: "Simple frontend development implementing React and Angular",
     date: "2023 - Present",
     description:
       "Acquired basic knowledge in frontend development, focusing on building interactive user interfaces using React and Angular.",
   },
+  {
+    title: "Microservices Architecture Development",
+    date: "Feb 2024 - June 2024",
+    description:
+      "Led the development of a microservices-based architecture, utilizing Golang, TypeScript, JavaScript, and Python as the primary programming languages. " +
+      "Each service was containerized and communicated via a N.A.T.S messaging server",
+  },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-6">
-        <ExperienceItem {...experience} />
-      </li>
-    ))
-  }
-</ol>
+<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+  {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
+</div>
