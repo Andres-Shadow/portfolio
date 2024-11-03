@@ -3,16 +3,62 @@ import Badge from "./Badge.astro";
 
 const PROJECTS = [
   {
+    title: "ShrinkIt!",
+    description:
+      "ShrinkIt! is a URL shortener designed as a technical deep dive into Hexagonal Architecture and clean coding. Made with SpringBoot and React, it combines backend rigor with frontend flexibility, creating custom handlers, Dto & BASE62+SHA256 encoding for secure links. ShrinkIt! showcases a full-stack solution that’s modular & maintainable. 🚀",
+    link: "https://github.com/Andres-Shadow/ShrinkIt",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "React",
+      "Hexagonal Architecture",
+      "Clean Code",
+      "MySql",
+      "Fullstack",
+    ],
+  },
+  {
+    title: "QuickCloud: Máquinas virtuales a un click de distancia",
+    description:
+      "Degree final project. Developed a web plataform where users can manage virtual machines in a local cloud system with a single click. I refactored the previus project to implement a clean arquitecure and a better code quality on server side project. Also i update the way how docker containers were managed to deploy the project.",
+    link: "https://github.com/Andres-Shadow/uqcloud",
+    tags: [
+      "Go",
+      "Gin",
+      "Gorilla Mux",
+      "Gorm",
+      "SSG",
+      "VirtualBox",
+      "MySql",
+      "Docker",
+      "Docker Compose",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Golang templates",
+    ],
+  },
+  {
     title: "Microservices implementation project",
     description:
       "Developed a microservices project with 7 APIS (Authenticacion with JWT API, Logs Manager API, User accounts Manager API, Health Monitor API, Gateway API, Notications API" +
       " implementing Goland, Python, Javascript and NATS as message broker. The project was deployed in a Docker-Compose environment. and tested with cucumber.js (automation tests setted in Jenkins via docker).",
     link: "https://github.com/Andres-Shadow/Microservices",
-    tags: ["Golang","Javascript","Typescript","Python","NATS","Docker","Cucumber.js","Jenkins",],
+    tags: [
+      "Golang",
+      "Javascript",
+      "Typescript",
+      "Python",
+      "NATS",
+      "Docker",
+      "Cucumber.js",
+      "Jenkins",
+    ],
   },
   {
     title: "GreenGo",
-    description: "GreenGo is an automated deployment tool built with Go, designed to streamline CI/CD pipelines by monitoring Git repositories and deploying changes efficiently using Docker Compose. Following Green Coding principles, it minimizes resource usage, making deployments faster and more sustainable.",
+    description:
+      "GreenGo is an automated deployment tool built with Go, designed to streamline CI/CD pipelines by monitoring Git repositories and deploying changes efficiently using Docker Compose. Following Green Coding principles, it minimizes resource usage, making deployments faster and more sustainable.",
     link: "https://github.com/Andres-Shadow/GreenGo",
     tags: ["Go", "Docker", "Docker Compose", "DevOps", "Green Code"],
   },
@@ -24,21 +70,6 @@ const PROJECTS = [
     link: "https://github.com/Andres-Shadow/shopping-cart",
     tags: ["Java", "Spring Boot", "JPA", "Maven", "Angular", "Lombok"],
   },
-  {
-    title: "Random Image Server",
-    description:
-      "Developed a simple server that makes a recursive search into a folder and returns three random images that are displayed in a simple HTML page with Bootstrap.",
-    link: "https://github.com/Andres-Shadow/Random-Image-Golang-App",
-    tags: ["Golang", "HTML", "Bootstrap"],
-  },
-  {
-    title: "QuickCloud: Máquinas virtuales a un click de distancia",
-    description:
-      "Degree final project. Developed a web plataform where users can manage virtual machines in a local cloud system with a single click. I refactored the previus project to implement a clean arquitecure and a better code quality on server side project. Also i update the way how docker containers were managed to deploy the project.",
-    link: "https://github.com/Andres-Shadow/uqcloud",
-    tags: ["Go","Gin","Gorilla Mux","Gorm","SSG","VirtualBox","MySql","Docker","Docker Compose","HTML","CSS","Javascript","Golang templates",],
-  },
-  
   {
     title: "New Projects",
     description: "Coming soon...",
