@@ -1,50 +1,80 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
 
-const EXPERIENCE = [
+const WORK_EXPERIENCE = [
   {
-    title: "Java Application Development",
-    date: "2021 - Present",
+    role: "Backend Developer",
+    company: "Bancolombia",
+    date: "Aprl 2025 - Present",
     description:
-      "Developed various academic projects using Java, focusing on both desktop (JavaFX) and web applications (Spring Boot & Quarkus). " +
-      "Leveraged technologies like JDBC, JPA, and Hibernate for database interaction, managing project dependencies with Gradle and Maven.",
+      "Design and maintain reactive backend microservices using Java, Spring Boot, and WebFlux within Bancolombia’s distributed banking ecosystem. Develop scalable RESTful APIs and event-driven integrations while ensuring software resilience through automated testing with JUnit and Karate. Manage CI/CD workflows with Azure DevOps and YAML pipelines, orchestrating deployments on AWS EKS clusters with Docker and Kubernetes. Collaborate in agile SCRUM teams to resolve production incidents, optimize integrations across heterogeneous systems, and improve operational efficiency through backend automation solutions.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "WebFlux",
+      "RabbitMQ",
+      "AWS EKS",
+      "Azure DevOps",
+      "Docker",
+      "Kubernetes",
+      "JUnit",
+      "Karate",
+      "PostgreSQL",
+      "Redis",
+    ],
   },
   {
-    title: "Version Control with Git",
-    date: "2021 - Present",
+    role: "Backend Developer",
+    company: "Bancolombia / VCSoft",
+    date: "Feb 2025 - Aprl 2026",
     description:
-      "Utilized Git for version control across various projects, with GitHub as the primary platform for code storage and collaboration.",
+      "Developed and maintained reactive microservices using Java, Spring Boot, and WebFlux within Bancolombia’s backend ecosystem. Resolved production incidents through Helix while ensuring software resilience with automated testing using JUnit and Karate. Managed deployments and orchestration in AWS EKS clusters through Azure DevOps CI/CD pipelines defined in YAML. Designed integration solutions across heterogeneous database ecosystems using RabbitMQ and event-driven architectures, improving operational efficiency and reducing execution times of recurring processes by 98%.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "WebFlux",
+      "RabbitMQ",
+      "AWS EKS",
+      "Azure DevOps",
+      "JUnit",
+      "Karate",
+      "Docker",
+      "Kubernetes",
+    ],
   },
   {
-    title: "Virtualization Technologies Implementation",
-    date: "2022 - Present",
+    role: "Backend Developer - Team Project Leader",
+    company: "EasyGym",
+    date: "Dec 2023 - Jan 2025",
     description:
-      "Implemented server and container virtualization strategies using Docker and Kubernetes. " +
-      "Migrated locally developed projects into Docker containers for streamlined deployment.",
+      "Led the design and development of a microservices-based asset and account management platform using Java and Python. Implemented clean and hexagonal architectures with Spring Boot, Flask, FastAPI, and reactive programming using WebFlux. Containerized the ecosystem with Docker Compose and migrated workloads to Kubernetes on AWS EKS. Established CI/CD pipelines with Azure DevOps and implemented TDD/BDD practices using JUnit, Postman, Gherkin, and CucumberJS while coordinating collaborative workflows with Git and GitHub.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Python",
+      "Flask",
+      "FastAPI",
+      "WebFlux",
+      "MySQL",
+      "Docker",
+      "Kubernetes",
+      "AWS EKS",
+      "Azure DevOps",
+      "JUnit",
+      "CucumberJS",
+    ],
   },
   {
-    title: "Golang Application Development",
-    date: "2023 - Present",
+    role: "Software Development Research Assistant",
+    company: "Universidad del Quindío",
+    date: "Jun 2022 - Dec 2022",
     description:
-      "Developed personal and academic projects using Golang, with a focus on web applications (Gin, Fiber, and Gorilla Mux). " +
-      "Built RESTful services and managed database connections using GORM and XORM.",
-  },
-  {
-    title: "Simple frontend development implementing React and Angular",
-    date: "2023 - Present",
-    description:
-      "Acquired basic knowledge in frontend development, focusing on building interactive user interfaces using React and Angular.",
-  },
-  {
-    title: "Microservices Architecture Development",
-    date: "Feb 2024 - June 2024",
-    description:
-      "Led the development of a microservices-based architecture, utilizing Golang, TypeScript, JavaScript, and Python as the primary programming languages. " +
-      "Each service was containerized and communicated via a N.A.T.S messaging server",
+      "Collaborated on a university research project exploring containerized microservices deployment strategies. Assisted in developing Python scripts for automated performance benchmarking. Documented findings and contributed to a published academic paper on cloud-native architectures.",
+    technologies: ["Python", "Docker", "Kubernetes", "Git", "Linux"],
   },
 ];
 ---
 
-<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-  {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
+<div class="space-y-6">
+  {WORK_EXPERIENCE.map((exp) => <ExperienceItem {...exp} />)}
 </div>
