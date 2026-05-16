@@ -3,127 +3,63 @@ const TECHNOLOGY_CATEGORIES = [
   {
     category: "Backend Development",
     technologies: [
-      {
-        name: "Java with SpringBoot, Hibernate & JPA",
-        level: "Advanced",
-        experience: "3 Years",
-      },
-      {
-        name: "Go with Gin, Fiber, Gorilla Mux & Gorm",
-        level: "Advanced",
-        experience: "2 Years",
-      },
-      {
-        name: "Node.js (Javascript & Typescript) with Express, Fastify & Sequelize",
-        level: "Advanced",
-        experience: "2 Years",
-      },
-      {
-        name: "Python with Flask & FastAPI",
-        level: "Medium",
-        experience: "1.5 Years",
-      },
+      { name: "Java / Spring Boot / Hibernate", level: "Advanced", experience: "5 Years" },
+      { name: "Go / Gin / Fiber / GORM", level: "Advanced", experience: "3 Years" },
+      { name: "Node.js / Express / Fastify", level: "Advanced", experience: "2 Years" },
+      { name: "Python / Flask / FastAPI", level: "Advanced", experience: "3 Years" },
     ],
   },
   {
     category: "Databases",
     technologies: [
-      {
-        name: "Relational Database Management with MySQL, MariaDB & PostgreSQL",
-        level: "Advanced",
-        experience: "3 Years",
-      },
-      {
-        name: "No Relational Database Management with MongoDB",
-        level: "Basic",
-        experience: "1 Year",
-      },
+      { name: "MySQL / MariaDB / PostgreSQL", level: "Advanced", experience: "3 Years" }
     ],
   },
-
   {
     category: "Frontend Development",
     technologies: [
-      {
-        name: "React.js & Next.js",
-        level: "Basic",
-        experience: "1.5 Years",
-      },
-      {
-        name: "Angular",
-        level: "Basic",
-        experience: "4 Months",
-      },
-      {
-        name: "Astro",
-        level: "Basic",
-        experience: "1 Month",
-      },
+      { name: "React / Next.js", level: "Basic", experience: "1.5 Years" },
+      { name: "Angular", level: "Basic", experience: "4 Months" },
+      { name: "Astro", level: "Basic", experience: "1 Month" },
     ],
   },
   {
     category: "DevOps & Tools",
     technologies: [
-      {
-        name: "Styling with TailwindCSS & Bootstrap",
-        level: "Advanced",
-        experience: "2 Years",
-      },
-      {
-        name: "Version Control with Git, GitHub, GitLab & Bitbucket",
-        level: "Advanced",
-        experience: "3 Years",
-      },
-      {
-        name: "Development Tools: Postman, VSCode, IntelliJ IDEA",
-        level: "Advanced",
-        experience: "3 Years",
-      },
-      {
-        name: "CI/CD Tools: Jenkins & Other Automation Platforms",
-        level: "Basic",
-        experience: "1 Year",
-      },
-      {
-        name: "Containerization with Docker",
-        level: "Advanced",
-        experience: "3 Years",
-      },
-      {
-        name: "Cloud Computing (AWS, EC2, EMR & Redshift)",
-        level: "Medium",
-        experience: "1.5 Years",
-      },
-      {
-        name: "Testing with BDD & TDD (Cucumber, Junit & Jest)",
-        level: "Basic",
-        experience: "1 Year",
-      },
+      { name: "Docker & Containerization", level: "Advanced", experience: "3 Years" },
+      { name: "Git / GitHub / GitLab", level: "Advanced", experience: "3 Years" },
+      { name: "AWS (EC2 / EMR / Redshift)", level: "Advanced", experience: "3 Years" },
+      { name: "CI/CD (Jenkins / GitHub Actions)", level: "Advanced", experience: "3 Year" },
+      { name: "Testing (JUnit / Jest / Cucumber)", level: "Advanced", experience: "3 Year" },
     ],
   },
 ];
 ---
 
-<!-- Sección de tarjetas -->
-<div class="py-2">
-  {
-    TECHNOLOGY_CATEGORIES.map((category) => (
-      <div class="mb-8">
-        <h4 class="text-2xl font-bold text-white mb-4">{category.category}</h4>
-        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {category.technologies.map((tech) => (
-            <div class="p-4 bg-gray-900 rounded-lg shadow-lg">
-              <h5 class="text-lg font-semibold text-white opacity-70">
-                {tech.name}
-              </h5>
-              <p class="text-sm text-gray-400">Experience: {tech.experience}</p>
-              <p class="text-sm font-medium text-gray-300">
-                Level: {tech.level}
-              </p>
+<div class="space-y-10">
+  {TECHNOLOGY_CATEGORIES.map((category) => (
+    <div>
+      <h4 class="text-xl font-bold text-white mb-5 flex items-center gap-2">
+        <span class="w-1 h-6 bg-blue-500 rounded-full inline-block" />
+        {category.category}
+      </h4>
+      <div class="grid gap-3 sm:grid-cols-2">
+        {category.technologies.map((tech) => (
+          <div class="p-4 rounded-lg bg-gray-900/50 border border-gray-800 hover:border-gray-700 hover:bg-gray-900/80 transition-all duration-300">
+            <div class="flex items-center justify-between mb-3">
+              <h5 class="text-sm font-semibold text-white">{tech.name}</h5>
+              <span class={`text-xs font-medium px-2 py-0.5 rounded-full shrink-0 ${
+                tech.level === "Advanced" ? "text-green-400 bg-green-500/10" :
+                tech.level === "Medium" ? "text-yellow-400 bg-yellow-500/10" :
+                "text-red-400 bg-red-500/10"
+              }`}>
+                {tech.level}
+              </span>
             </div>
-          ))}
-        </div>
+            <p class="text-xs text-gray-500">{tech.experience}</p>
+          </div>
+        ))}
       </div>
-    ))
-  }
+    </div>
+  ))}
 </div>

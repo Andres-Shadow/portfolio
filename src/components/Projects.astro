@@ -5,7 +5,7 @@ const PROJECTS = [
   {
     title: "ShrinkIt!",
     description:
-      "ShrinkIt! is a URL shortener designed as a technical deep dive into Hexagonal Architecture and clean coding. Made with SpringBoot and React, it combines backend rigor with frontend flexibility, creating custom handlers, Dto & BASE62+SHA256 encoding for secure links. ShrinkIt! showcases a full-stack solution that’s modular & maintainable. 🚀",
+      "ShrinkIt! is a URL shortener designed as a technical deep dive into Hexagonal Architecture and clean coding. Made with SpringBoot and React, it combines backend rigor with frontend flexibility, creating custom handlers, Dto & BASE62+SHA256 encoding for secure links. ShrinkIt! showcases a full-stack solution that's modular & maintainable.",
     link: "https://github.com/Andres-Shadow/ShrinkIt",
     tags: [
       "Java",
@@ -20,14 +20,13 @@ const PROJECTS = [
   {
     title: "QuickCloud: Máquinas virtuales a un click de distancia",
     description:
-      "Degree final project. Developed a web plataform where users can manage virtual machines in a local cloud system with a single click. I refactored the previus project to implement a clean arquitecure and a better code quality on server side project. Also i update the way how docker containers were managed to deploy the project.",
+      "Degree final project. Developed a web platform where users can manage virtual machines in a local cloud system with a single click. Refactored the previous project to implement clean architecture and better code quality on the server side. Updated Docker container management to deploy the project.",
     link: "https://github.com/Andres-Shadow/uqcloud",
     tags: [
       "Go",
       "Gin",
       "Gorilla Mux",
       "Gorm",
-      "SSG",
       "VirtualBox",
       "MySql",
       "Docker",
@@ -35,14 +34,12 @@ const PROJECTS = [
       "HTML",
       "CSS",
       "Javascript",
-      "Golang templates",
     ],
   },
   {
     title: "Microservices implementation project",
     description:
-      "Developed a microservices project with 7 APIS (Authenticacion with JWT API, Logs Manager API, User accounts Manager API, Health Monitor API, Gateway API, Notications API" +
-      " implementing Goland, Python, Javascript and NATS as message broker. The project was deployed in a Docker-Compose environment. and tested with cucumber.js (automation tests setted in Jenkins via docker).",
+      "Developed a microservices project with 7 APIs (Authentication with JWT, Logs Manager, User Accounts, Health Monitor, Gateway, Notifications) implementing Golang, Python, Javascript and NATS as message broker. Deployed in a Docker-Compose environment and tested with Cucumber.js via Jenkins.",
     link: "https://github.com/Andres-Shadow/Microservices",
     tags: [
       "Golang",
@@ -65,8 +62,7 @@ const PROJECTS = [
   {
     title: "Spring boot shopping cart",
     description:
-      "Fullstack tecnical test for a job application. Developed a shopping cart with Spring Boot, Manven, Lombok for backend and Angular with Typescript for frontend." +
-      ' The project implemented a Json file as database so package "logic" contains an manual developed semi-ORM',
+      "Fullstack technical test for a job application. Developed a shopping cart with Spring Boot, Maven, Lombok for backend and Angular with Typescript for frontend. The project implements a JSON file as database with a manually developed semi-ORM.",
     link: "https://github.com/Andres-Shadow/shopping-cart",
     tags: ["Java", "Spring Boot", "JPA", "Maven", "Angular", "Lombok"],
   },
@@ -79,28 +75,29 @@ const PROJECTS = [
 ];
 ---
 
-<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
   {
     PROJECTS.map((project) => (
-      <div class="max-w-sm p-6 border rounded-lg shadow bg-gray-900 border-gray-800">
-        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white-200 opacity-70">
-          {project.title}
-        </h5>
+      <div class="p-6 rounded-lg bg-gray-900/50 border border-gray-800 hover:border-gray-700 hover:bg-gray-900/80 transition-all duration-300 h-full flex flex-col">
+        <h5 class="mb-2 text-xl font-semibold text-white">{project.title}</h5>
 
-        <p class="mb-3 font-normal text-gray-400">{project.description}</p>
+        <p class="mb-4 text-gray-400 text-sm leading-relaxed flex-1">{project.description}</p>
 
         <a
           href={project.link}
-          class="inline-flex items-center font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200"
+          class="inline-flex items-center gap-1 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200 mb-3"
         >
-          Github Repo
+          View on GitHub
+          <span class="text-lg">&rarr;</span>
         </a>
 
-        <ul class="flex flex-wrap gap-2 mb-2 pt-3">
-          {project.tags.map((tag) => (
-            <Badge>{tag}</Badge>
-          ))}
-        </ul>
+        {project.tags.length > 0 && (
+          <ul class="flex flex-wrap gap-2">
+            {project.tags.map((tag: string) => (
+              <Badge>{tag}</Badge>
+            ))}
+          </ul>
+        )}
       </div>
     ))
   }

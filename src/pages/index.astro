@@ -1,13 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
 import Linkdind from "../components/Icons/Linkdind.astro";
 import Github from "../components/Icons/Github.astro";
 import SocialInfo from "../components/SocialInfo.astro";
 import Mail from "../components/Icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import Container from "../components/Container.astro";
-import Study from "../components/Icons/Study.astro";
+import Work from "../components/Icons/Work.astro";
 import Code from "../components/Icons/Code.astro";
 import Projects from "../components/Projects.astro";
 import About from "../components/Icons/About.astro";
@@ -15,127 +14,122 @@ import Technologies from "../components/Technologies.astro";
 import Tech from "../components/Icons/Tech.astro";
 ---
 
-<Layout title="Andres Portfolio">
+<Layout title="Andrés Dussán | Backend Developer">
   <main class="px-5">
-    <div></div>
-
-    <Container class="px-5 max-w-screen-md mx-auto py-44 pb-12">
-      <!-- Encabezado principal con imagen y saludo -->
-      <div class="flex flex-col lg:flex-row items-center gap-6 pb-10">
-        <!-- Imagen de perfil -->
+    <Container class="px-5 max-w-screen-md mx-auto pt-32 pb-12">
+      <div class="flex flex-col lg:flex-row items-center gap-8 pb-10">
         <img
-          class="rounded-full h-60 w-60 border-4 border-white"
+          class="rounded-full h-56 w-56 border-2 border-white/10"
           src="https://avatars.githubusercontent.com/u/106280663?v=4"
           alt="andres photo"
         />
-        <!-- Saludo y Badge -->
         <div class="text-center lg:text-left">
-          <h1
-            class="text-white text-5xl lg:text-5xl font-bold flex flex-col lg:flex-row gap-2 items-center lg:items-start pt-5"
-          >
-            Hi! <br>
-            I'm Andrés!!
+          <div class="flex items-center gap-3 justify-center lg:justify-start flex-wrap mb-2">
+            <h1 class="text-white text-4xl lg:text-5xl font-bold">
+              Andrés Dussán
+            </h1>
             <a
-              class="flex justify-center items-center"
               href="https://www.linkedin.com/in/am-dussanb/"
               target="_blank"
               rel="noopener"
+              class="shrink-0"
             >
-              <Badge> Open to work </Badge>
+              <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 whitespace-nowrap">
+                Currently working
+              </span>
             </a>
-          </h1>
-
-          <h2 class="text-xl opacity-80 mt-4">
-            I am a Systems and Computer Engineering student from Colombia with
-            practical experience as a backend developer, specializing in Java,
-            Golang, and Node.js (JavaScript & TypeScript). I have a strong
-            passion for technology, constantly exploring new tools and
-            innovations like No-Code and Low-Code platforms. +3 Years of
-            experience in backend software development, working with Java
-            (Maven, Gradle, Spring Boot, Hibernate, JPA), Golang (Gin, Gorm,
-            Mux, Fiber), and Node.js (Express, Fastify, Sequelize)
-          </h2>
+          </div>
+          <p class="text-lg text-blue-400 font-medium mb-4">
+            Backend Developer &amp; Systems Engineering Student
+          </p>
+          <p class="text-base text-gray-400 leading-relaxed max-w-xl">
+            Systems and Computer Engineering graduated from Universidad del Quindío
+            with +4 years of practical experience in backend development.
+            Specialized in Java, Go, and Node.js — passionate about clean
+            architecture, microservices, and cloud-native technologies.
+          </p>
         </div>
       </div>
-      <nav class="flex gap-x-2 pt-2">
+      <nav class="flex flex-wrap gap-3 pt-2 justify-center lg:justify-start">
         <SocialInfo href="https://www.linkedin.com/in/am-dussanb/">
-          <Linkdind class="size-6" />
+          <Linkdind class="size-5" />
           LinkedIn
         </SocialInfo>
         <SocialInfo href="https://www.github.com/andres-shadow/">
-          <Github class="size-6" />
+          <Github class="size-5" />
           Github
         </SocialInfo>
         <SocialInfo href="mailto:andremadussan@gmail.com">
-          <Mail class="size-6" />
-          andremadussan@gmail.com
+          <Mail class="size-5" />
+          Email
         </SocialInfo>
       </nav>
     </Container>
 
+    <div class="space-y-24">
     <Container id="about">
-      <h2 class="text-3xl font-semi-bold text-white mb-10 flex gap-x-2 pt-2">
-        <About class="size-9" />
+      <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+        <About class="size-7" />
         About Me
       </h2>
-      <p class="text-lg opacity-80">
-        I am a passionate Systems and Computer Engineering student at
-        Universidad del Quindío, currently in my 10th semester. Since 2021, I've
-        been deeply involved in backend development, creating solutions through
-        university projects and beyond. I am eager to gain my first professional
-        experience in the IT field, regardless of the sector. My primary goal is
-        to continue learning and growing, applying my skills while embracing new
-        challenges and opportunities. My expertise spans across Java, Python,
-        Golang, and Node.js (JavaScript & TypeScript), with foundational
-        knowledge in C# (.Net).<br /><br />
-
-        Recently, I have expanded my skills into frontend development, focusing
-        on modern frameworks like React, Next.js, and Astro, alongside styling
-        tools such as TailwindCSS and Bootstrap.<br /><br />
-
-        I am fluent in English (B2), with intermediate proficiency in French
-        (B1) and a basic understanding of Colombian Sign Language (A1).<br /><br
-        />
-      </p>
+      <div class="space-y-4 text-gray-400 leading-relaxed">
+        <p>
+          I'm a Systems and Computer Engineering graduated from
+          Universidad del Quindío, Colombia, with over four years of hands-on
+          experience in backend software development. My journey started in 2021
+          with Java, and since then I've expanded my expertise across Go,
+          Node.js, and Python, building everything from RESTful APIs to
+          microservices architectures.
+        </p>
+        <p>
+          I'm passionate about clean code, software architecture, and
+          cloud-native technologies. I enjoy tackling complex problems and
+          turning them into efficient, scalable solutions. Currently, I'm
+          deepening my knowledge of distributed systems, DevOps practices,
+          and exploring modern frontend frameworks like React, Next.js, and
+          Astro to become a more versatile developer.
+        </p>
+        <p>
+          I speak English (B2), French (B1), and Colombian Sign Language (A1),
+          and I'm always eager to collaborate on impactful projects.
+        </p>
+      </div>
     </Container>
 
     <Container id="technologies">
-      <h2 class="text-3xl font-semi-bold text-white mb-10 flex gap-x-2 pt-5">
-        <Tech class="size-9" />
+      <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+        <Tech class="size-7" />
         Technologies
       </h2>
-      <p class="opacity-80">
-        Here i list the technologies i have worked and i am familiar with, i am
-        always learning new technologies and tools to improve my skills so i
-        hope to keep this list growing and being updated.
+      <p class="text-gray-400 mb-8">
+        Technologies and tools I've worked with across backend, frontend,
+        databases, and DevOps.
       </p>
       <Technologies />
     </Container>
 
     <Container id="experience">
-      <h2 class="text-3xl font-semi-bold text-white mb-10 flex gap-x-2 pt-2">
-        <Study class="size-9" />
-        Experience
+      <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+        <Work class="size-7" />
+        Work Experience
       </h2>
-      <p class="opacity-80 pb-6">
-        These are the fields where i have worked and i've gained experience
-        during my career.
+      <p class="text-gray-400 mb-8">
+        Professional experience in software development
       </p>
       <Experience />
     </Container>
 
     <Container id="projects">
-      <h2 class="text-3xl font-semi-bold text-white mb-10 flex gap-x-2 pt-4">
-        <Code class="size-9" />
+      <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+        <Code class="size-7" />
         Projects
       </h2>
-      <p class="opacity-80 pb-6">
-        Over here i list the most complete projects i have created and worked on
-        as a college project or personal improvement. I allways try to implement
-        the best practices and the most modern technologies to make them as
-        efficient as possible, i hope you like them.
+      <p class="text-gray-400 mb-8">
+        A selection of projects I've built, from academic work to personal
+        tools and experiments.
       </p>
       <Projects />
     </Container>
+    </div>
   </main>
 </Layout>
